@@ -1,0 +1,228 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    min-width: 1300px;
+    z-index: 101;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    transition: all .3s;
+
+    @media screen and (max-width: 1640px) {
+        position: absolute;
+    }
+
+    &.on::after {
+        content: "";
+        top: 80px;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, .4);
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 80px;
+        padding-left: 70px;
+        padding-right: 70px;
+        z-index: 10;
+        transition: all .3s;
+
+        .logo {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            a {
+                display: block;
+                width: 174px;
+                height: 34px;
+            }
+
+            .gray {
+                display: none;
+            }
+        }
+
+        .btn-side {
+            display: block;
+            position: relative;
+            width: 35px;
+            height: 35px;
+            padding: 4px;
+
+            &:hover {
+
+                .line2,
+                .line3 {
+                    width: 100%;
+                }
+            }
+
+            &.on {
+                .line2 {
+                    opacity: 0;
+                }
+
+                .line1 {
+                    transform: translate(0%, 0) rotate(45deg)
+                }
+
+                .line3 {
+                    width: 100%;
+                    transform: translate(0%, 0) rotate(135deg)
+                }
+            }
+
+            span {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: #fff;
+                background-repeat: no-repeat;
+                transform: translateY(-50%);
+                opacity: 1;
+                transition: all .3s;
+            }
+
+            .line1 {
+                transform: translateY(-9px) rotate(0);
+            }
+
+            .line2 {
+                width: 22px;
+            }
+
+            .line3 {
+                width: 22px;
+                transform: translateY(7px) rotate(0);
+            }
+        }
+
+        .group-txt {
+            display: flex;
+            gap: 50px;
+
+            a {
+                color: #fff;
+                font-size: 18px;
+                font-weight: 500;
+
+                &:first-child {
+                    display: none;
+                }
+            }
+        }
+
+        &.current {
+            background: #fff;
+
+            .group-txt a {
+                color: #000;
+            }
+
+            .btn-side span {
+                background-color: #000;
+            }
+
+            .logo .white {
+                display: none;
+            }
+
+            .logo .gray {
+                display: block;
+            }
+        }
+
+        &.on {
+            background: #fff;
+
+            .group-txt a {
+                color: #000;
+
+                &:first-child {
+                    display: block;
+                }
+            }
+
+            .btn-side span {
+                background-color: #000;
+            }
+
+            .logo .white {
+                display: none;
+            }
+
+            .logo .gray {
+                display: block;
+            }
+        }
+    }
+
+    .gnb {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: auto;
+        padding: 52px 0 75px;
+        background-color: #fff;
+        background-repeat: no-repeat;
+        z-index: 9;
+        display: none;
+
+        .group-list {
+            display: flex;
+            justify-content: center;
+            gap: 96px;
+
+
+
+            &>li {
+                line-height: 1.2;
+
+                &>a {
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+            }
+
+            .sub {
+                display: flex;
+                flex-direction: column;
+                gap: 18px;
+                margin-top: 35px;
+
+                &>li>a {
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+            }
+
+            .small-sub {
+                display: flex;
+                flex-direction: column;
+                gap: 7px;
+                margin-top: 10px;
+
+                a {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #6f6f6f;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,185 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+@keyframes first-txt1 {
+    from {
+        opacity: 0;
+        padding-right: 0px;
+        transform: translateX(0%)
+    }
+
+    to {
+        opacity: 1;
+        padding-right: 188px;
+        transform: translateX(20%)
+    }
+}
+
+@keyframes first-txt2 {
+    from {
+        opacity: 0;
+        padding-left: 0px;
+        transform: translateX(0%)
+    }
+
+    to {
+        opacity: 1;
+        padding-left: 64px;
+        transform: translateX(-20%)
+    }
+}
+
+@keyframes first-txt3 {
+    from {
+        opacity: 0;
+        padding-right: 0px;
+        transform: translateX(0%)
+    }
+
+    to {
+        opacity: 1;
+        padding-right: 80px;
+        transform: translateX(20%)
+    }
+}
+
+@keyframes second-txt1 {
+    from {
+        opacity: 0;
+        padding-left: 0px;
+        transform: translateX(0%)
+    }
+
+    to {
+        opacity: 1;
+        padding-left: 106px;
+        transform: translateX(-20%)
+    }
+}
+
+@keyframes second-txt2 {
+    from {
+        opacity: 0;
+        padding-right: 0px;
+        transform: translateX(0%)
+    }
+
+    to {
+        opacity: 1;
+        padding-right: 180px;
+        transform: translateX(20%)
+    }
+}
+
+@keyframes second-txt3 {
+    from {
+        opacity: 0;
+        padding-left: 0px;
+        transform: translateX(0%)
+    }
+
+    to {
+        opacity: 1;
+        padding-left: 42px;
+        transform: translateX(-20%)
+    }
+}
+
+@keyframes third-txt1 {
+    from {
+        opacity: 0;
+        padding-right: 0px;
+        transform: translateX(0%)
+    }
+
+    to {
+        opacity: 1;
+        padding-right: 10px;
+        transform: translateX(20%)
+    }
+}
+
+@keyframes third-txt2 {
+    from {
+        opacity: 0;
+        padding-left: 0px;
+        transform: translateX(0%)
+    }
+
+    to {
+        opacity: 1;
+        padding-left: 114px;
+        transform: translateX(-20%)
+    }
+}
+
+@keyframes third-txt3 {
+    from {
+        opacity: 0;
+        transform: translateX(0%)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(20%)
+    }
+}
+
+@keyframes third-txt4 {
+    from {
+        opacity: 0;
+        transform: translateX(0%)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-20%)
+    }
+}
+
+@keyframes four-txt1 {
+    from {
+        transform: translateX(0%)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(20%)
+    }
+}
+
+@keyframes four-txt2 {
+    from {
+        transform: translateX(0%)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-20%)
+    }
+}
+
+@keyframes four-txt3 {
+    from {
+        padding-right: 0px;
+        transform: translateX(0%)
+    }
+
+    to {
+        opacity: 1;
+        padding-right: 118px;
+        transform: translateX(20%)
+    }
+}
+
+@keyframes four-txt4 {
+    from {
+        padding-left: 0px;
+        transform: translateX(0%)
+    }
+
+    to {
+        opacity: 1;
+        padding-left: 110px;
+        transform: translateX(-20%)
+    }
+}
