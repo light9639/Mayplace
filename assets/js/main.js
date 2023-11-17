@@ -31,10 +31,10 @@ let prevButtonText = prevButton.find('> .text');
 let nextButtonText = nextButton.find('> .text');
 
 roomsSwiper = new Swiper(".sc-rooms .swiper", {
-    // autoplay: {
-    //     delay: 3000,
-    //     disableOnInteraction: false
-    // },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+    },
     speed: 2000,
     loop: true,
     slidesPerView: 1,
@@ -86,17 +86,6 @@ dinigSwiper = new Swiper(".sc-dining .swiper", {
     }
 });
 
-// spotSwiper = new Swiper(".sc-spot .swiper", {
-//     autoplay: {
-//         delay: 500,
-//         disableOnInteraction: false
-//     },
-//     speed: 10000,
-//     loopAdditionalSlides: 1,
-//     slidesPerView: 'auto',
-//     spaceBetween: 35,
-// });
-
 $('.header .btn-side').click(function (e) {
     e.preventDefault();
     $(this).toggleClass('on');
@@ -124,14 +113,33 @@ $(window).scroll(function () {
     curr = lastScroll
 })
 
-
 $('.sc-visual .close-btn').click(function () {
     $('.sc-visual .advertise').addClass('none')
 })
 
-$('.footer .familybtn > a').click(function (e) {
+$('.children, .adult, .room').click(function () {
+    $('#roompopup').addClass('on');
+})
+
+$('#roompopup').click(function () {
+    $(this).removeClass('on');
+})
+
+$('.footer .familybtn > button').click(function (e) {
     e.preventDefault();
     $('.footer .familybtn ul').slideToggle();
+})
+
+$('.sc-visual .close-btn').click(function () {
+    if ($('.sc-visual .select-btn input:checked')) {
+        sessionStorage.setItem('advertise', 'none');
+    }
+})
+
+$(window).on("load", function () {
+    if (sessionStorage.getItem('advertise') == 'none') {
+        $('.advertise').addClass('none');
+    }
 })
 
 ScrollTrigger.create({

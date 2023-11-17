@@ -153,16 +153,15 @@
                             </div>
                         </div>
                     </div>
-                    <button class="btn-prev">
+                    <button class="btn btn-prev">
                         <span class="blind">이전</span>
                     </button>
-                    <button class="btn-next">
+                    <button class="btn btn-next">
                         <span class="blind">다음</span>
                     </button>
                 </div>
                 <article class="group-reserve">
                     <h2 class="blind">예약</h2>
-                    <!--  -->
                     <div class="txt-area">
                         <div class="reserve">
                             <span class="title">RESERVATION</span>
@@ -184,24 +183,59 @@
                             <span class="title">CHILDREN</span>
                             <span class="content">0</span>
                         </div>
+                        <div id="roompopup" class="popup">
+                            <div class="popupWrap">
+                                <div class="popupCont plus_box">
+                                    <div class="more_box right_l_box">
+                                        <div class="roompopupBox more_sel more_1">
+                                            <div class="roomTitleBox">
+                                                <p class="roomTitle">객실 <span>1</span></p>
+                                            </div>
+                                            <div class="roomSelect">
+                                                <p class="adult">성인</p>
+                                                <div class="adultCountBox sel_box adult">
+                                                    <button class="minus m_adult"></button>
+                                                    <span class="sel_count" data-id="1" id="adult_cnt_1">2</span>
+                                                    <button class="add plus p_adult"></button>
+                                                </div>
+                                            </div>
+                                            <div class="roomSelect">
+                                                <p class="adult">어린이</p>
+                                                <div class="adultCountBox sel_box kid off">
+                                                    <button class="minus m_kid off"></button>
+                                                    <span class="sel_count" data-id="1" id="kid_cnt_1">0</span>
+                                                    <button class="add plus p_kid"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btnMore sel_box rooms">
+                                    <span class="sel_count" id="room_cnt"
+                                        style="position: absolute;opacity: 0;width: 0;height: 0;">1</span>
+                                    <button href="#" class="roomAddBtn buttonType add">객실 추가</button>
+                                    <a href="#" class="okBtn">확인</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <a href="#" class="reserve-btn">객실 예약하기</a>
-                    </artic>
-                    <div class="advertise">
-                        <div class="img-wrap">
-                            <img src="./assets/images/V4igg7Mo4s__20231030181449.jpg" alt="홈페이지 리뉴얼 오픈">
-                        </div>
-                        <div class="text-area">
-                            <div class="select-btn">
-                                <input type="checkbox" id="topPopToday" name="topPopToday">
-                                <label for="topPopToday">오늘 하루 열지 않기</label>
-                            </div>
-                            <a href="#" class="close-btn">
-                                <img src="./assets/images/icoCloseBtn_1.svg" alt="닫기">
-                                <span>닫기</span>
-                            </a>
-                        </div>
+                </article>
+                <div class="advertise">
+                    <div class="img-wrap">
+                        <img src="./assets/images/V4igg7Mo4s__20231030181449.jpg" alt="홈페이지 리뉴얼 오픈">
                     </div>
+                    <div class="text-area">
+                        <div class="select-btn">
+                            <input type="checkbox" id="topPopToday" name="topPopToday">
+                            <label for="topPopToday">오늘 하루 열지 않기</label>
+                        </div>
+                        <a href="#" class="close-btn">
+                            <img src="./assets/images/icoCloseBtn_1.svg" alt="닫기">
+                            <span>닫기</span>
+                        </a>
+                    </div>
+                </div>
             </section>
             <section class="sc-offers">
                 <header class="group-title">
