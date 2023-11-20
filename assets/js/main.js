@@ -85,6 +85,9 @@ dinigSwiper = new Swiper(".sc-dining .swiper", {
     }
 });
 
+/**
+ * 왼쪽 메뉴 버튼 클릭시 각각의 클래스명 추가
+ */
 $('.header .btn-side').click(function (e) {
     e.preventDefault();
     $(this).toggleClass('on');
@@ -93,6 +96,9 @@ $('.header .btn-side').click(function (e) {
     $('.header .gnb').slideToggle();
 })
 
+/**
+ * 스크롤 내릴 시 클래스명 추가
+ */
 let lastScroll = 0;
 
 $(window).scroll(function () {
@@ -112,35 +118,46 @@ $(window).scroll(function () {
     curr = lastScroll
 })
 
-$('.sc-visual .close-btn').click(function () {
-    $('.sc-visual .advertise').addClass('none')
-})
-
+/**
+ * 메인 배너 하단 메뉴판 나오게 하기
+ */
 $('.children, .adult, .room').click(function () {
     $('#roompopup').addClass('on');
 })
-
 $('#roompopup').click(function () {
     $(this).removeClass('on');
 })
 
+/**
+ * footer 패밀리 메뉴 클릭시 접었다 펴기
+ */
 $('.footer .familybtn > button').click(function (e) {
     e.preventDefault();
     $('.footer .familybtn ul').slideToggle();
 })
 
+/**
+ * 메인배너 팝업창 제거
+ */
+$('.sc-visual .close-btn').click(function () {
+    $('.sc-visual .advertise').removeClass('on')
+})
 $('.sc-visual .close-btn').click(function () {
     if ($('.sc-visual .select-btn input:checked')) {
         sessionStorage.setItem('advertise', 'none');
     }
 })
-
-$(window).on("load", function () {
-    if (sessionStorage.getItem('advertise') == 'none') {
-        $('.advertise').addClass('none');
+$(document).ready(function () {
+    if (sessionStorage.getItem('advertise') != 'none') {
+        $('.advertise').addClass('on');
+    } else {
+        $('.advertise').removeClass('on');
     }
 })
 
+/**
+ * 스크롤 트리거 js
+ */
 ScrollTrigger.create({
     trigger: '.container',
     start: "0% 0%",
