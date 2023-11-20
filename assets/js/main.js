@@ -40,9 +40,8 @@ roomsSwiper = new Swiper(".sc-rooms .swiper", {
     slidesPerView: 1,
     pagination: {
         el: ".sc-rooms .swiper-pagination",
-        clickable: true,
         renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + paginationList[index] + "</span>";
+            return '<a href="#" class="' + className + '">' + paginationList[index] + "</a>";
         },
     },
     navigation: {
