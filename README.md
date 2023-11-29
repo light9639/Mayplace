@@ -19,5 +19,3 @@
 - 
 ### :zap: Swiper
 - 
-### :zap: Gsap, ScrollTrigger
-- 
