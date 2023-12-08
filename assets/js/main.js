@@ -129,6 +129,46 @@ $('#roompopup').click(function () {
 })
 
 /**
+ * 메인 배너 하단 날짜 선택 나오게 하기
+ */
+$('.sc-visual .check .content').click(function () {
+    $('#datepicker').addClass('on');
+})
+$('#datepicker').click(function () {
+    $(this).removeClass('on');
+})
+
+// $(document).on('click', function (e) {
+//     console.log($('.sc-visual .check .content').has(e.target).length == 0);
+//     if ($('.sc-visual .check .content').has(e.target).length) {
+//         console.log(111);
+//         $('#datepicker').removeClass('on')
+//     } else {
+//         console.log(2323);
+//     }
+// });
+
+document.addEventListener('click', function (e) {
+    var targetElement = e.target;
+    var btnElements = document.querySelectorAll('.sc-visual .check .content');
+    var shareBtns = document.querySelectorAll('#datepicker');
+
+    var isOutsideClick = true;
+
+    btnElements.forEach(function (btnElement) {
+        if (btnElement.contains(targetElement)) {
+            isOutsideClick = false;
+        }
+    });
+
+    if (isOutsideClick) {
+        shareBtns.forEach(function (shareBtn) {
+            shareBtn.classList.remove('on');
+        });
+    }
+});
+
+/**
  * footer 패밀리 메뉴 클릭시 접었다 펴기
  */
 $('.footer .familybtn > button').click(function (e) {
@@ -171,3 +211,4 @@ ScrollTrigger.create({
     end: "100% 0%",
     toggleClass: { targets: '.reserve-link', className: 'no-fix' }
 })
+

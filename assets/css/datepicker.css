@@ -1,0 +1,190 @@
+#datepicker #calendar {
+    position: absolute;
+    width: 260px;
+    height: 25px;
+    opacity: 0;
+    z-index: 1;
+    letter-spacing: -.4px;
+    cursor: pointer
+}
+
+#datepicker .daterangepicker {
+    position: absolute;
+    top: auto!important;
+    right: auto!important;
+    bottom: 121px!important;
+    left: 50%!important;
+    width: 557px;
+    border: none;
+    padding: 30px;
+    border-radius: 0!important;
+    -webkit-box-shadow: 0 4px 14px 0 rgba(0,0,0,.16);
+    box-shadow: 0 4px 14px 0 rgba(0,0,0,.16);
+    -webkit-transform: translateX(-68.7%);
+    transform: translateX(-68.7%);
+    z-index: 1
+}
+
+#datepicker .daterangepicker::after {
+    content: none
+}
+
+#datepicker .daterangepicker .drp-calendar {
+    float: left;
+    padding: 0 5px
+}
+
+#datepicker .daterangepicker .drp-calendar.left .calendar-table {
+    padding-right: 12.5px
+}
+
+#datepicker .daterangepicker .drp-calendar.right .calendar-table {
+    padding-left: 12.5px
+}
+
+#datepicker .daterangepicker .drp-calendar .calendar-table table thead tr th {
+    height: 32px;
+    vertical-align: top;
+    border: 0 solid transparent;
+    font-size: 10px;
+    color: #6f6f6f;
+    font-family: Pretendard,sans-serif
+}
+
+#datepicker .daterangepicker .drp-calendar .calendar-table table thead tr th.available:hover {
+    border-color: transparent;
+    background-color: transparent;
+    background-repeat: no-repeat
+}
+
+#datepicker .daterangepicker .drp-calendar .calendar-table table thead tr:first-child th {
+    height: auto;
+    margin: 0;
+    vertical-align: top;
+    cursor: default;
+    font-size: 18px;
+    font-weight: 500;
+    color: #6f6f6f;
+    font-family: Pretendard,sans-serif
+}
+
+#datepicker .daterangepicker .drp-calendar .calendar-table table thead tr:first-child th.month {
+    padding-bottom: 16px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000
+}
+
+#datepicker .daterangepicker .drp-calendar .calendar-table table thead tr:first-child th.next {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    cursor: pointer
+}
+
+#datepicker .daterangepicker .drp-calendar .calendar-table table thead tr:first-child th.next span {
+    display: block;
+    width: 9px;
+    height: 16px;
+    padding: 0;
+    margin-top: 4px;
+    border: none;
+    background-image: url(../../common/images/icoDefaultarrow.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+}
+
+#datepicker .daterangepicker .drp-calendar .calendar-table table thead tr:first-child th.prev {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    cursor: pointer
+}
+
+#datepicker .daterangepicker .drp-calendar .calendar-table table thead tr:first-child th.prev span {
+    display: block;
+    width: 9px;
+    height: 16px;
+    padding: 0;
+    margin-top: 4px;
+    border: none;
+    background-image: url(../../common/images/icoDefaultarrow.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+
+#datepicker .daterangepicker .drp-calendar .calendar-table table tbody tr td {
+    width: 32px;
+    height: 32px;
+    border: 0 solid transparent;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: Pretendard,sans-serif
+}
+
+#datepicker .daterangepicker .drp-calendar .calendar-table table tbody tr td.off {
+    color: #a3a3a3;
+    cursor: default;
+    text-decoration: inherit
+}
+
+#datepicker .daterangepicker .drp-calendar .calendar-table table tbody tr td.off.ends {
+    visibility: hidden
+}
+
+#datepicker .daterangepicker .drp-calendar .calendar-table table tbody tr td.off.disabled {
+    color: #a3a3a3;
+    cursor: default;
+    text-decoration: inherit
+}
+
+#datepicker .daterangepicker .drp-calendar .calendar-table table tbody tr td:hover {
+    border-radius: 0
+}
+
+#datepicker .daterangepicker .drp-calendar .calendar-table table tbody tr td.today.start-date.end-date {
+    border-radius: 50%;
+    background-color: #000;
+    background-repeat: no-repeat
+}
+
+#datepicker .daterangepicker .drp-calendar .calendar-table table tbody tr td.active.start-date:not(.end-date) {
+    border-radius: 100px 0 0 100px
+}
+
+#datepicker .daterangepicker .drp-calendar .calendar-table table tbody tr td.active.end-date:not(.start-date) {
+    border-radius: 0 100px 100px 0
+}
+
+#datepicker .daterangepicker .drp-calendar .calendar-table table tbody tr td.active {
+    border-radius: 50%;
+    background-color: #000;
+    background-repeat: no-repeat
+}
+
+#datepicker .daterangepicker .drp-calendar .calendar-table table tbody tr td.in-range {
+    border-radius: 0;
+    color: #fff;
+    background-color: #000;
+    background-repeat: no-repeat
+}
+
+#datepicker .daterangepicker::after,#datepicker .daterangepicker::before {
+    content: none
+}

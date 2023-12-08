@@ -1254,6 +1254,13 @@ body {
 .container .sc-visual .group-reserve .txt-area .check {
   width: 343px;
 }
+.container .sc-visual .group-reserve .txt-area .check #datepicker {
+  display: none;
+  cursor: pointer;
+}
+.container .sc-visual .group-reserve .txt-area .check #datepicker.on {
+  display: block;
+}
 .container .sc-visual .group-reserve .txt-area .room {
   width: 120px;
   text-align: center;
