@@ -134,37 +134,21 @@ $('#roompopup').click(function () {
 $('.sc-visual .check .content').click(function () {
     $('#datepicker').addClass('on');
 })
-$('#datepicker').click(function () {
-    $(this).removeClass('on');
-})
-
-// $(document).on('click', function (e) {
-//     console.log($('.sc-visual .check .content').has(e.target).length == 0);
-//     if ($('.sc-visual .check .content').has(e.target).length) {
-//         console.log(111);
-//         $('#datepicker').removeClass('on')
-//     } else {
-//         console.log(2323);
-//     }
-// });
 
 document.addEventListener('click', function (e) {
     var targetElement = e.target;
-    var btnElements = document.querySelectorAll('.sc-visual .check .content');
-    var shareBtns = document.querySelectorAll('#datepicker');
-
+    var btnElements = document.querySelector('.sc-visual .check .content');
+    var picker = document.querySelector('#datepicker');
+    var roompop = document.querySelector('#roompopup');
     var isOutsideClick = true;
 
-    btnElements.forEach(function (btnElement) {
-        if (btnElement.contains(targetElement)) {
-            isOutsideClick = false;
-        }
-    });
+    if (btnElements.contains(targetElement)) {
+        isOutsideClick = false;
+        roompop.classList.remove('on');
+    }
 
     if (isOutsideClick) {
-        shareBtns.forEach(function (shareBtn) {
-            shareBtn.classList.remove('on');
-        });
+        picker.classList.remove('on');
     }
 });
 
